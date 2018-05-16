@@ -37,7 +37,12 @@ class MadlibForm extends Component {
       color: '',
       pluralNoun: '',
       adjectiveOne: '',
-      celebrityOne: ''
+      celebrityOne: '',
+
+      adjectiveTwo: '',
+      nounOne: '',
+      numberOne: '',
+      numberTwo: ''
     }
   }
 
@@ -52,15 +57,15 @@ class MadlibForm extends Component {
   render() {
 
     this.inputData = [
-      {placeholder: 'Color', prop: 'color'},
-      {placeholder: 'Noun (Plural)', prop: 'pluralNoun'},
-      {placeholder: 'Adjective', prop: 'adjectiveOne'},
-      {placeholder: 'Celebrity', prop: 'celebrityOne'},
+      {placeholder: 'Color', prop: 'color', state: this.state.color},
+      {placeholder: 'Noun (Plural)', prop: 'pluralNoun', state: this.state.pluralNoun},
+      {placeholder: 'Adjective', prop: 'adjectiveOne', state: this.state.adjectiveOne},
+      {placeholder: 'Celebrity', prop: 'celebrityOne', state: this.state.celebrityOne},
 
-      {placeholder: 'Adjective', prop: 'adjectiveTwo'},
-      {placeholder: 'Noun', prop: 'pluralNoun'},
-      {placeholder: 'Number', prop: 'numberOne'},
-      {placeholder: 'Number', prop: 'numberTwo'},
+      {placeholder: 'Adjective', prop: 'adjectiveTwo', state: this.state.adjectiveTwo},
+      {placeholder: 'Noun', prop: 'nounOne', state: this.state.nounOne},
+      {placeholder: 'Number', prop: 'numberOne', state: this.state.numberOne},
+      {placeholder: 'Number', prop: 'numberTwo', state: this.state.numberTwo},
     ]
 
     return (
@@ -69,7 +74,7 @@ class MadlibForm extends Component {
           <Row style={{textAlign: 'center', color: 'white'}}>
             {
               _.map(this.inputData, (data, indexKey) => {
-                return <MadlibInput key={indexKey} index={indexKey + 1} placeholder={data.placeholder} handleChange={this.handleChange({inputTitle: data.prop})} />
+                return <MadlibInput key={indexKey} index={indexKey + 1} state={data.state} placeholder={data.placeholder} handleChange={this.handleChange({inputTitle: data.prop})} />
               })
             }
           </Row>
