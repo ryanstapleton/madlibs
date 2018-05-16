@@ -55,7 +55,12 @@ class MadlibForm extends Component {
       {placeholder: 'Color', prop: 'color'},
       {placeholder: 'Noun (Plural)', prop: 'pluralNoun'},
       {placeholder: 'Adjective', prop: 'adjectiveOne'},
-      {placeholder: 'Celebrity', prop: 'celebrityOne'}
+      {placeholder: 'Celebrity', prop: 'celebrityOne'},
+
+      {placeholder: 'Adjective', prop: 'adjectiveTwo'},
+      {placeholder: 'Noun', prop: 'pluralNoun'},
+      {placeholder: 'Number', prop: 'numberOne'},
+      {placeholder: 'Number', prop: 'numberTwo'},
     ]
 
     return (
